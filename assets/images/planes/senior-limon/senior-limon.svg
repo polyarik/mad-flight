@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Moho 12.2 build 21774 -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Frame_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="142px" height="142px">
+<g id="Planes">
+<g id="senior-limon">
+<g id="self">
+<g id="frame">
+<path fill="#a9a142" fill-rule="evenodd" stroke="#6b662d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M 65.658 117.711 C 65.658 117.708 65.625 89.651 65.625 89.648 C 67.174 89.795 70.209 89.518 70.812 89.517 C 71.458 89.517 76.374 89.649 76.375 89.649 C 76.363 99.004 76.339 117.710 76.339 117.713 C 76.338 117.713 65.659 117.711 65.658 117.711 Z"/>
+<path fill="none" stroke="#c6bb42" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" d="M 76.375 89.649 C 76.374 89.649 71.458 89.517 70.812 89.517 "/>
+<path fill="none" stroke="#c6bb42" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" d="M 70.812 89.517 C 70.209 89.518 67.174 89.795 65.625 89.648 "/>
+<path fill="#c6bb42" fill-rule="evenodd" stroke="#6b662d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 70.812 7.071 C 72.183 7.058 79.021 10.045 81.039 12.952 C 83.448 16.421 83.112 26.874 83.113 26.875 C 83.113 26.878 83.148 78.523 83.148 78.528 C 83.148 78.529 83.455 83.894 82.396 85.822 C 81.611 87.248 79.708 88.625 78.221 89.287 C 77.705 89.516 76.375 89.649 76.375 89.649 C 76.374 89.649 71.458 89.517 70.812 89.517 C 70.209 89.518 67.174 89.795 65.625 89.648 C 65.063 89.595 64.294 89.515 63.778 89.286 C 62.290 88.624 60.385 87.246 59.601 85.820 C 58.542 83.892 58.849 78.529 58.849 78.528 C 58.849 78.523 58.886 26.883 58.886 26.878 C 58.886 26.876 58.573 16.436 60.958 12.950 C 62.901 10.109 69.478 7.084 70.812 7.071 Z"/>
+</g>
+<g id="tail">
+<path fill="#f0e352" fill-rule="evenodd" stroke="#6b662d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 50.288 114.893 C 50.291 114.891 91.709 114.889 91.712 114.891 C 91.713 114.891 91.712 116.256 91.712 116.256 C 91.712 116.257 91.712 124.593 91.712 124.593 C 91.712 124.594 90.344 126.562 89.516 127.139 C 88.597 127.780 86.012 128.433 86.012 128.433 C 86.009 128.433 55.990 128.434 55.987 128.434 C 55.987 128.433 53.403 127.781 52.484 127.140 C 51.657 126.562 50.288 124.594 50.288 124.593 C 50.288 124.593 50.289 116.258 50.289 116.257 C 50.289 116.257 50.287 114.893 50.288 114.893 Z"/>
+<path fill="#f0e352" fill-rule="evenodd" stroke="#6b662d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 67.723 114.893 C 67.724 114.892 74.276 114.889 74.277 114.889 C 74.277 114.889 74.277 117.289 74.277 117.289 C 74.276 117.290 74.277 131.940 74.277 131.941 C 74.277 131.942 74.149 135.087 73.930 136.415 C 73.815 137.108 73.375 138.688 73.375 138.689 C 73.375 138.689 68.625 138.690 68.625 138.690 C 68.625 138.690 68.185 137.109 68.070 136.416 C 67.851 135.087 67.723 131.942 67.723 131.941 C 67.723 131.940 67.724 117.292 67.723 117.291 C 67.723 117.291 67.723 114.893 67.723 114.893 Z"/>
+</g>
+<g id="propellers">
+<path fill="none" stroke="#c6bb42" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M 21.500 31.691 C 21.500 29.047 21.500 23.761 21.500 23.760 "/>
+<path fill="none" stroke="#999564" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 21.500 23.760 C 23.575 23.766 25.650 23.773 27.725 23.779 M 21.500 23.760 C 21.499 23.760 17.375 23.773 15.312 23.779 "/>
+<path fill="none" stroke="#c6bb42" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M 43.487 31.691 C 43.487 29.047 43.487 23.761 43.487 23.760 "/>
+<path fill="none" stroke="#999564" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 43.487 23.760 C 45.562 23.766 47.637 23.773 49.712 23.779 M 43.487 23.760 C 43.486 23.760 39.361 23.773 37.299 23.779 "/>
+<path fill="none" stroke="#c6bb42" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M 98.477 31.693 C 98.477 29.049 98.477 23.762 98.477 23.762 "/>
+<path fill="none" stroke="#999564" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 98.477 23.762 C 100.552 23.768 102.627 23.775 104.702 23.781 M 98.477 23.762 C 98.477 23.762 94.352 23.775 92.289 23.781 "/>
+<path fill="none" stroke="#c6bb42" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M 120.464 31.693 C 120.464 29.049 120.464 23.762 120.464 23.762 "/>
+<path fill="none" stroke="#999564" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 120.464 23.762 C 122.539 23.768 124.614 23.775 126.689 23.781 M 120.464 23.762 C 120.464 23.762 116.339 23.775 114.276 23.781 "/>
+<path fill="none" stroke="#c6bb42" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M 71.000 5.947 C 71.000 5.350 71.000 4.156 71.000 4.156 "/>
+<path fill="none" stroke="#999564" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 71.083 6.474 C 75.935 6.481 80.787 6.488 85.640 6.494 M 56.611 6.494 C 61.435 6.488 66.259 6.481 71.083 6.474 "/>
+</g>
+<g id="wings">
+<path fill="#f0e352" fill-rule="evenodd" stroke="#6b662d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 4.179 30.281 C 4.860 29.558 7.147 28.816 7.148 28.816 C 7.160 28.816 134.838 28.814 134.850 28.814 C 134.851 28.814 137.136 29.561 137.818 30.283 C 138.493 30.999 139.103 33.301 139.103 33.301 C 139.103 33.304 139.103 63.877 139.103 63.881 C 139.103 63.881 138.474 66.049 137.818 66.713 C 137.128 67.412 134.851 68.091 134.850 68.091 C 134.838 68.091 7.162 68.091 7.150 68.091 C 7.149 68.091 4.872 67.415 4.182 66.717 C 3.525 66.052 2.897 63.881 2.897 63.881 C 2.897 63.877 2.900 33.307 2.900 33.304 C 2.900 33.304 3.503 30.997 4.179 30.281 Z"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

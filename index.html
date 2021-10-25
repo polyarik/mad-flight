@@ -1,0 +1,62 @@
+<!doctype html>
+<meta charset=utf8>
+
+<html ng-app="mad-flight">
+	<head>
+		<title>MAD Flight!</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="views/style.css">
+		<link rel="stylesheet" type="text/css" href="views/canvas.css">
+		<link rel="stylesheet" type="text/css" href="views/hangar.css">
+		<link rel="stylesheet" type="text/css" href="views/ui.css">
+
+		<script type="text/javascript" src="libs/angular/angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+
+		<script type="text/javascript" src="libs/angular/directives/resize.directive.js"></script>
+
+		<script type="text/javascript" src="controllers/classes/game.js"></script>
+		<script type="text/javascript" src="controllers/classes/audio-player.js"></script>
+		<script type="text/javascript" src="controllers/classes/hangar.js"></script>
+		<script type="text/javascript" src="controllers/classes/follower.js"></script>
+		<script type="text/javascript" src="controllers/classes/pilot.js"></script>
+		<script type="text/javascript" src="controllers/classes/plane.js"></script>
+
+		<script type="text/javascript" src="controllers/main.ctrl.js"></script>
+	</head>
+
+	<body ng-controller="main-ctrl" ng-mousemove="game.follower.move($event.pageX, $event.pageY)" onresize ondragstart="return false;">
+		<div class="ui">
+			<div class="coins">${{game.coins}}</div>
+
+			<div class="coins-plus" ng-if="game.follower.coins > 0">
+				<span class="coins-plus-num">+{{game.follower.coins}}$</span>
+				<span class="coins-plus-multiplier" ng-if="game.follower.coinMultiplier > 1">[x{{game.follower.coinMultiplier}}]</span>
+			</div>
+
+			<div class="audio-mute" ng-class="{'audio-mute-on': game.audioPlayer.isMuted}" ng-click="game.audioPlayer.mute()">♫</div>
+			<span class="plane-speedometer" ng-if="game.follower.coins">{{game.follower.movement.speed}}px/sec</span>
+		</div>
+
+		<div class="hangar">
+			<div ng-repeat="plane in game.hangar.places" class="hangar-place">
+				<div class="hangar-plane" ng-if="plane.name != undefined" ng-class="{'unavailable-text': game.coins < plane.price}" ng-mousedown="game.takePlane($index)">
+					<span class="hangar-plane-name">{{plane.name}}</span>
+
+					<div class="hangar-plane-img"
+						ng-class="{'unavailable-plane': game.coins < plane.price}"
+						ng-style="{'background-image':'url(./assets/images/planes/'+plane.name+'/'+plane.name+'.svg)'}">
+					</div>
+
+					<span class="hangar-plane-price">{{plane.price}}$</span>
+				</div>
+
+				<div class="hangar-place-empty" ng-if="plane.name == undefined" ng-mousedown="game.leavePlane($index)">empty</div>
+			</div>
+		</div>
+
+		<canvas id="cnvs-follower" ></canvas>
+		<canvas id="cnvs-track"></canvas>
+	</body>
+</html>

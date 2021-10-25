@@ -1,0 +1,81 @@
+.hangar {
+	z-index: 1;
+	position: absolute;
+	top: 16px;
+	left: 16px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	border-radius: 16px;
+
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hangar-place {
+	position: relative;
+
+	width: 186px;
+	height: 186px;
+
+	padding: 5px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	text-align: center;
+	font-size: 18px;
+}
+
+.hangar-place-empty {
+	z-index: 4;
+	position: relative;
+	width: calc(100% - 4px);
+	height: calc(100% - 4px);
+
+	line-height: 182px;
+
+	border: 2px solid rgba(0, 0, 0, 0.05);
+	border-radius: 16px;
+}
+
+.hangar-plane {
+	z-index: 4;
+	width: 100%;
+	height: 100%;
+
+	border-radius: 16px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.hangar-plane-name {
+	font-size: 20px;
+}
+
+.hangar-plane-img {
+	width: 142px;
+	height: 142px;
+
+	background-size: cover;
+}
+
+.hangar-plane-price {
+	
+}
+
+.unavailable-text {
+	color: red;
+}
+
+.unavailable-plane {
+	filter: grayscale(0.9);
+}

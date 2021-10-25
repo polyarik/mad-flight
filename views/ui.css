@@ -1,0 +1,83 @@
+.ui {
+	z-index: 4;
+
+	font-size: 25px;
+	text-align: right;
+}
+
+.coins {
+	z-index: 5;
+	position: relative;
+
+	top: 16px;
+	right: 16px;
+
+	padding: 8px;
+	display: inline-block;
+
+	border-radius: 16px;
+	margin-bottom: 16px;
+
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.coins-plus {
+	z-index: 5;
+	position: relative;
+
+	top: 16px;
+	right: 16px;
+}
+
+.coins-plus-num {
+	color: green;
+}
+
+.coins-plus-multiplier {
+	color: rgba(255, 0, 0, 0.7);
+}
+
+.audio-mute {
+	z-index: 5;
+	position: absolute;
+
+	top: calc(100% - 16px - 36px);
+	left: 16px;
+
+	width: 36px;
+	height: 36px;
+
+	border-radius: 16px;
+
+	text-align: center;
+	line-height: 36px;
+
+	background-color: rgba(0, 0, 0, 0.1);
+
+	cursor: pointer;
+}
+
+.audio-mute-on {
+	color: rgba(255, 100, 100);
+
+	font-size: 20px;
+}
+
+.plane-speedometer {
+	z-index: 5;
+	position: absolute;
+
+	top: calc(100% - 32px - 36px);
+	right: 16px;
+
+	padding: 8px;
+
+	border-radius: 16px;
+
+	text-align: center;
+	line-height: 36px;
+
+	background-color: rgba(0, 0, 0, 0.1);
+
+	cursor: pointer;
+}

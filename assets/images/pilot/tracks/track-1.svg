@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Moho 12.2 build 21774 -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Frame_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px">
+<g id="Pilot_(test)">
+<g id="Track">
+<g id="track_1">
+<path fill="#000000" fill-rule="evenodd" fill-opacity="0.101961" stroke="none" d="M 27.343 21.284 C 27.342 21.284 21.887 21.151 21.886 21.151 C 21.886 21.152 20.640 23.589 21.054 24.586 C 21.547 25.775 22.606 26.874 24.712 26.682 C 26.820 26.490 27.553 25.187 27.934 23.956 C 28.180 23.157 27.343 21.284 27.343 21.284 M 29.602 9.702 C 29.135 5.528 28.199 4.599 26.876 3.854 C 26.014 3.369 23.685 3.311 22.681 4.073 C 20.569 5.676 20.786 12.705 20.786 12.706 C 20.786 12.706 21.984 15.180 22.197 16.326 C 22.365 17.233 22.211 19.400 22.211 19.401 C 22.212 19.401 27.131 19.578 27.132 19.578 C 27.132 19.577 30.339 16.287 29.602 9.702 Z"/>
+</g>
+</g>
+</g>
+<g id="Layer_4">
+<path fill="none" stroke="#ff0000" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" d="M 15.000 13.500 C 15.000 14.752 15.000 16.005 15.000 17.257 "/>
+</g>
+</svg>
