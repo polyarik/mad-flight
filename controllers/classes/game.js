@@ -39,6 +39,11 @@ class Game {
 
 			this.canvases[i].ctx.scale(scale, scale);
 		}
+
+		if (this.follower) {
+			this.follower.render();
+			this.follower.renderTracks();
+		}
 	}
 
 	initializeImages() {
@@ -63,6 +68,7 @@ class Game {
 			data.settings = {};
 
 		if (this.follower) {
+			clearInterval(this.follower.interval);
 			this.follower.speedCalc = false;
 
 			const coords = this.follower.movement.coords;

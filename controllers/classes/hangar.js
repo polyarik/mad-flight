@@ -6,19 +6,19 @@ class Hangar {
 		this.planes = {
 			'crop-duster': {
 				'price': 10,
-				'settings': {'coinMultiplier': 1, 'trackInterval': 250},
+				'settings': {'coinMultiplier': 1, 'trackInterval': 200, 'trackLifetime': 2000},
 				'imgs': {'self': null, 'tracks': [null]}
 			},
 
 			'senior-limon': {
 				'price': 250,
-				'settings': {'coinMultiplier': 2, 'trackInterval': 100},
+				'settings': {'coinMultiplier': 2, 'trackInterval': 50, 'trackLifetime': 500},
 				'imgs': {'self': null, 'tracks': [null, null]}
 			},
 
 			'hawk': {
 				'price': 750,
-				'settings': {'coinMultiplier': 5, 'trackInterval': 0},
+				'settings': {'coinMultiplier': 5, 'trackInterval': 0, 'trackLifetime': 1000},
 				'imgs': {'self': null, 'tracks': [null]}
 			},
 

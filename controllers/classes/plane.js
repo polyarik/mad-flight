@@ -15,36 +15,34 @@ class Plane extends Follower {
 				this.coinMultiplier = settings.coinMultiplier;
 		}
 
-		if (imgs.speedTracks !== undefined) {
+		// special tracks for fast movement
+		/*if (imgs.speedTracks !== undefined) {
 			this.rendering.speedTrack = {
 				'ctx': ctxs.follower,
 				'imgs': imgs.speedTracks
-				//... | special tracks for fast movement
+				//...
 			};
-		}
+		}*/
 	}
 
 	/*leaveSpeedTrack() {
 		//
 	}*/
 
-	calcSpeed(delay) {
-		let movement = this.movement;
+	calcSpeed() {
+		const movement = this.movement;
 
 		const dist = movement.dist;
-		const speed = Math.round(dist * 1000 / delay); // px/sec
+		const currentTime = Date.now();
+		const timeShift = currentTime - movement.time;
+		const speed = Math.round(dist * 1000 / timeShift); // px/sec
 		
 		movement.dist = 0;
-		this.speed = speed;
+		movement.time = currentTime;
+		movement.speed = speed;
 
 		if (speed) 
 			this.coins += this.getCoins(speed);
-
-		if (this.speedCalc) {
-			setTimeout(() => {
-				this.calcSpeed(delay);
-			}, delay);
-		}
 	}
 
 	/**
@@ -52,13 +50,5 @@ class Plane extends Follower {
 	 */
 	getCoins(speed) {
 		return Math.ceil( Math.pow(Math.floor(speed / 1000), 3) / 600 );
-	}
-
-	set speed(speed) {
-		this.movement.speed = Math.max(0, speed);
-	}
-
-	get speed() {
-		return this.movement.speed;
 	}
 }

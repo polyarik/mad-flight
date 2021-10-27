@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="audio-mute" ng-class="{'audio-mute-on': game.audioPlayer.isMuted}" ng-click="game.audioPlayer.mute()">♫</div>
-			<span class="plane-speedometer" ng-if="game.follower.coins">{{game.follower.speed}} px/sec</span>
+			<span class="plane-speedometer" ng-if="game.follower.coins">{{game.follower.movement.speed}} px/sec</span>
 		</div>
 
 		<div class="hangar">
@@ -49,7 +49,7 @@
 						ng-style="{'background-image':'url(./assets/images/planes/'+plane.name+'/'+plane.name+'.svg)'}">
 					</div>
 
-					<span class="hangar-plane-price">{{plane.price}}$</span>
+					<span class="hangar-plane-price">${{plane.price}}</span>
 				</div>
 
 				<div class="hangar-place-empty" ng-if="plane.name == undefined" ng-mousedown="game.leavePlane($index)">empty</div>

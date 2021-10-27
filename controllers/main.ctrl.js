@@ -3,7 +3,7 @@ App.controller("main-ctrl", function MainCtrl($scope) {
 
 	$scope.refreshSpedometer = (delay=0) => {
 		setTimeout(() => {
-			if ($scope.game?.follower?.speed === 0)
+			if ($scope.game?.follower?.movement?.speed === 0)
 				$scope.$apply();
 		}, delay);
 	};
