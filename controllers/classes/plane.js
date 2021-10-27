@@ -22,28 +22,27 @@ class Plane extends Follower {
 				//... | special tracks for fast movement
 			};
 		}
-
 	}
 
 	/*leaveSpeedTrack() {
 		//
 	}*/
 
-	calcSpeed(follower, delay) {
-		const movement = follower.movement;
+	calcSpeed(delay) {
+		let movement = this.movement;
 
 		const dist = movement.dist;
 		const speed = Math.round(dist * 1000 / delay); // px/sec
 		
 		movement.dist = 0;
-		movement.speed = speed;
+		this.speed = speed;
 
-		if (speed)
+		if (speed) 
 			this.coins += this.getCoins(speed);
 
-		if (follower.speedCalc) {
-			setTimeout(function() {
-				follower.calcSpeed(follower, delay);
+		if (this.speedCalc) {
+			setTimeout(() => {
+				this.calcSpeed(delay);
 			}, delay);
 		}
 	}
@@ -53,5 +52,13 @@ class Plane extends Follower {
 	 */
 	getCoins(speed) {
 		return Math.ceil( Math.pow(Math.floor(speed / 1000), 3) / 600 );
+	}
+
+	set speed(speed) {
+		this.movement.speed = Math.max(0, speed);
+	}
+
+	get speed() {
+		return this.movement.speed;
 	}
 }

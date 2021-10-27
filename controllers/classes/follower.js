@@ -50,7 +50,7 @@ class Follower {
 		this.render();
 
 		this.speedCalc = true; // check speed
-		this.calcSpeed(this, 100); // check speed (once in 100msec)
+		this.calcSpeed(100); // check speed (once in 100msec)
 	}
 
 	/**
@@ -151,8 +151,8 @@ class Follower {
 		ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 	}
 
-	calcSpeed(follower, delay) {
-		const movement = follower.movement;
+	calcSpeed(delay) {
+		const movement = this.movement;
 
 		const dist = movement.dist;
 		const speed = Math.round(dist * 1000 / delay); // px/sec
@@ -160,9 +160,9 @@ class Follower {
 		movement.dist = 0;
 		movement.speed = speed;
 
-		if (follower.speedCalc) {
-			setTimeout(function() {
-				follower.calcSpeed(follower, delay);
+		if (this.speedCalc) {
+			setTimeout(() => {
+				this.calcSpeed(delay);
 			}, delay);
 		}
 	}

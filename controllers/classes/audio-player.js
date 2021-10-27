@@ -66,7 +66,7 @@ class AudioPlayer {
 		if (this.isMuted) {
 			this.stopMusic();
 			//
-		} else {
+		} else if (this.playingMusic) {
 			this.playMusic(this.playingMusic);
 			//
 		}
