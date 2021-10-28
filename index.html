@@ -1,8 +1,12 @@
 <!doctype html>
-<meta charset=utf8>
 
 <html ng-app="mad-flight">
 	<head>
+		<meta charset="utf-8"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		<meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=.5, user-scalable=no"/>
+
 		<title>MAD Flight!</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -15,6 +19,8 @@
 		<script type="text/javascript" src="app.js"></script>
 
 		<script type="text/javascript" src="libs/angular/directives/resize.directive.js"></script>
+		<script type="text/javascript" src="libs/angular/directives/touchstart.directive.js"></script>
+		<script type="text/javascript" src="libs/angular/directives/touchmove.directive.js"></script>
 
 		<script type="text/javascript" src="controllers/classes/game.js"></script>
 		<script type="text/javascript" src="controllers/classes/audio-player.js"></script>
@@ -26,7 +32,10 @@
 		<script type="text/javascript" src="controllers/main.ctrl.js"></script>
 	</head>
 
-	<body ng-controller="main-ctrl" ng-mousemove="game.follower.move($event.pageX, $event.pageY); refreshSpedometer(300);" onresize ondragstart="return false;">
+	<body ng-controller="main-ctrl" onresize
+		ng-mousemove="game.follower.move($event.pageX, $event.pageY); refreshSpedometer(300);"
+		ng-touchstart="game.follower.onTouchStart($event.changedTouches[0].pageX, $event.changedTouches[0].pageY)"
+		ng-touchmove="game.follower.move($event.changedTouches[0].pageX, $event.changedTouches[0].pageY); refreshSpedometer(300);">
 		<div class="ui">
 			<div class="coins">${{game.coins}}</div>
 

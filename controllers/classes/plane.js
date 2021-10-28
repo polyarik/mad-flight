@@ -35,7 +35,7 @@ class Plane extends Follower {
 		const dist = movement.dist;
 		const currentTime = Date.now();
 		const timeShift = currentTime - movement.time;
-		const speed = Math.round(dist * 1000 / timeShift); // px/sec
+		const speed = Math.round(dist / timeShift * 1000); // px/sec
 		
 		movement.dist = 0;
 		movement.time = currentTime;
@@ -49,6 +49,9 @@ class Plane extends Follower {
 	 * Earn coins from the current speed
 	 */
 	getCoins(speed) {
-		return Math.ceil( Math.pow(Math.floor(speed / 1000), 3) / 600 );
+		const scale = window.devicePixelRatio;
+		const coins = Math.ceil( Math.pow(Math.floor(speed * scale / 1000), 3) / 600 );
+
+		return Math.min(coins, 5);
 	}
 }

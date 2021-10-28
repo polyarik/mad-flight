@@ -61,6 +61,10 @@ class Follower {
 		}, 100);
 	}
 
+	onTouchStart(newX, newY) {
+		this.movement.coords = {'x': newX, 'y': newY};
+	}
+
 	/**
 	 * Handles movement
 	 */
@@ -109,6 +113,7 @@ class Follower {
 		if (movement.speedCheck) {
 			const dist = movement.dist;
 			const timeShift = Date.now() - movement.time;
+
 			const speed = Math.round(dist * 1000 / timeShift); // px/sec
 			
 			movement.dist = 0;
