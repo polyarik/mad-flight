@@ -27,7 +27,8 @@ class Follower {
 
 		this.movement = {
 			'coords': {'x': 0, 'y': 0},
-			'direction': Math.Pi/2,
+			'direction': Math.PI / 2,
+			'inertness': 1, // smoothness of the turn
 			'speedCheck': false,
 			'time': Date.now(), // of the last check
 			'dist': 0, // distance since the last speed check
@@ -36,17 +37,20 @@ class Follower {
 		};
 
 		if (settings) {
-			if (settings.trackInterval)
-				this.rendering.tracks.interval = settings.trackInterval;
-
-			if (settings.trackLifetime)
-				this.rendering.tracks.lifetime = settings.trackLifetime;
-
 			if (settings.x)
 				this.movement.coords.x = settings.x;
 
 			if (settings.y)
 				this.movement.coords.y = settings.y;
+
+			if (settings.inertness)
+				this.movement.inertness = settings.inertness;
+
+			if (settings.trackInterval)
+				this.rendering.tracks.interval = settings.trackInterval;
+
+			if (settings.trackLifetime)
+				this.rendering.tracks.lifetime = settings.trackLifetime;
 		}
 
 		if (this.initialize)
@@ -101,9 +105,15 @@ class Follower {
 		if ( Math.abs(newY - y) + Math.abs(newX - x) < 9 )
 			return false;
 
-		const angle = Math.atan2((newY - y), (newX - x));
+		const turn = (Math.atan2((newY - y), (newX - x)) + Math.PI*2) % (Math.PI*2);
+		let change = turn - this.movement.direction;
 
-		this.movement.direction = angle;
+		if (Math.abs(change) > Math.PI)
+			change += (change < 0) ? Math.PI*2 : -Math.PI*2;
+
+		change /= this.movement.inertness; // smooth turning
+
+		this.movement.direction = (this.movement.direction + change + Math.PI*2) % (Math.PI*2);
 		return true;
 	}
 

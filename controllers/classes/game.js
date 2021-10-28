@@ -11,7 +11,7 @@ class Game {
 
 		this.audioPlayer = new AudioPlayer;
 		this.hangar = new Hangar("../../assets/images/planes/");
-		this.createFollower( {'imgs': this.images.pilot} ); // follows the cursor
+		this.createFollower(); // follows the cursor
 	}
 
 	initializeCanvases() {
@@ -61,7 +61,7 @@ class Game {
 		this.images.pilot = {'self': pilot, 'tracks': [track0, track1]};
 	}
 
-	createFollower(data) {
+	createFollower(data={}) {
 		data.ctxs = {'follower': this.canvases.follower.ctx, 'track': this.canvases.track.ctx};
 
 		if (!data.settings)
@@ -79,8 +79,12 @@ class Game {
 		if (this.status == "air") {
 			this.follower = new Plane(data);
 		} else {
+			data.imgs = this.images.pilot;
+			data.settings.inertness = 2;
 			data.settings.trackInterval = 42;
-			this.follower = new Pilot(data);
+			data.settings.trackLifetime = 10000; // in msec
+
+			this.follower = new Follower(data);
 		}
 	}
 
@@ -115,7 +119,7 @@ class Game {
 		this.hangar.leavePlane(place); // returning the plane
 
 		this.status = "ground";
-		this.createFollower( {'imgs': this.images.pilot} ); // disembarking
+		this.createFollower(); // disembarking
 		this.audioPlayer.stopMusic();
 	}
 
