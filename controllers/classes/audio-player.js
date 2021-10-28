@@ -37,22 +37,24 @@ class AudioPlayer {
 	}
 
 	playMusic(musicName) {
-		if (this.isMuted)
-			return false;
-
-		let music = this.audio.music[musicName];
-
-		music.volume = 0.1;
-		music.play();
-		music.loop = true;
 		this.playingMusic = musicName;
+
+		if (!this.isMuted) {
+			let music = this.audio.music[musicName];
+
+			music.volume = 0.1;
+			music.play();
+			music.loop = true;
+			this.playingMusic = musicName;
+		}
 	}
 
 	playSound(soundName) {
-		if (this.isMuted)
-			return false;
-
 		//
+
+		if (!this.isMuted) {
+			//
+		}
 	}
 
 	stopMusic() {
