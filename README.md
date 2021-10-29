@@ -16,7 +16,7 @@ Test of Angular.js mouse directives.
 - Earn money for high speed
 - Touch support and mobile controls
 
-### Avaiable planes:
+### Available planes:
 
 | Name         | Coin multiplier | Inertness | Track interval | Track lifetime | Price |
 | ------------ | --------------- | --------- | -------------- | -------------- | ----- |
