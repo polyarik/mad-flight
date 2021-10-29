@@ -13,8 +13,11 @@ Test of Angular.js mouse directives.
 ### Features:
 - Buy aircrafts and board them in the hangar
 - Move the mouse (or your finger) across the screen to gain speed
+- Leave nice trail that disappears over time
 - Earn money for high speed
 - Touch support and mobile controls
+
+![Pilot](assets/images/pilot/pilot-demo.jpg)
 
 ### Available planes:
 
